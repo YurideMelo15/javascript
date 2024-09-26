@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicando valores</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input{
+            width: 100px;
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplicação de números</h1>
+    <input type="number" name="txtn1" id="txtn1"> x
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Multiplicar" id="mt">
+    <div id="res">
+        ...
+    </div>
+    <script>
+        var mult = window.document.getElementById('mt')
+        mult.addEventListener('click', clicar)
+        function clicar() {
+            var n1 = Number(window.document.getElementById('txtn1').value)
+            var n2 = Number(window.document.getElementById('txtn2').value)
+            var m = n1 * n2
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `A multiplicação entre ${n1} e ${n2} resulta em ${m}`
+        }
+    </script>
+</body>
+</html>

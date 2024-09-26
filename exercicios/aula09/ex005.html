@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            background: gray;
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>O DOM significa Document object model</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div name = 'msg' id="msg">Clique em min</div>
+    <script>
+        var bod = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        /*var d = window.document.getElementById('msg')
+        d.style.backgroundColor = 'red'
+        d.innerText = 'Estou aguardando... ' + d.innerText
+        window.document.getElementById('msg').innerHTML ='Olá!'
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'olá!'
+        */
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'
+        d.style.backgroundColor = 'red'
+    </script>
+</body>
+</html>

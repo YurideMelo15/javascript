@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+</head>
+<body>
+    <h1>What is you country?</h1>
+    <input type="text" id="country">
+    <input type="button" value="Confirm" onclick="tap()">
+    <div id="divi">
+
+    </div>
+    <script>
+        function tap() {
+            var country = window.document.getElementById('country')
+            var result = window.document.getElementById('divi')
+            var count = String(country.value)
+            if (count == 'Brazil') {
+                result.innerText = `You are from ${count}, so you are a brazilian!`
+            } else {
+                result.innerText = `You are from ${count}, so you are foreigner`
+            }
+        }
+        
+    </script>
+</body>
+</html>
